@@ -17,8 +17,8 @@ function myFunction() {
 
 //🚀🚀🚀 ⬇️ 📝 Explanation ⬇️ 📝 🚀🚀🚀: 
 
-/*nestedFunction is able to access "internal" in myFunction because it forms a closure with the scope above it to find the 
-required context to fill the argument "internal" that is referenced when the console.log() function is executed*/
+/* nestedFunction is able to access "internal" in myFunction because it forms a closure with the scope of the outer function to find the 
+required context to fill the argument "internal" that is referenced when console.log() is executed */
 
 
 

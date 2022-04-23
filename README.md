@@ -25,14 +25,30 @@ Demonstrate your understanding of this week's concepts by answering the followin
 Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read.
 
 1. Explain the differences between `.map`, `.reduce` and `.filter` and describe a use case for each. 
+.map() is a built-in higher order function that takes a callback as an argument when it is invoked on an array using dot notation. It returns a new array when invoked without altering the data in the original array. It is useful when you want to manipulate a dataset without changing the source - for example, when .
+
+.reduce() is a built-in higher order function that takes a callback as an argument when it is invoked on an array using dot notation. Using the callback function, it reduces (adds/multiplies/concatenates) the contents of an array and returns a single value. This is particularly useful when dealing with an array of values that need to be summed.
+
+.filter() is a built-in higher order function that takes a callback as an argument when it is invoked on an array using dot notation. This function returns a new array without manipulating the original. The callback function should return a boolean, which if true will then result in that item being added onto the new array. This is useful when trying to get 
+
 
 2. Explain the difference between a callback and a higher order function.
+A higher order function is a function which passes other functions as arguments when run, while a callback function is a function that is executed by a higher order function.
 
 3. Explain what a closure is.
+A closure is the combination of a function and the environment in which it operates - it is formed when an inner function reaches into the scope of the outer function that houses it to search for a variable that is defined there.
 
 4. Describe the four principles of the 'this' keyword.
+Window binding is the default binding of all functions - when a function is freely invoked (ie. without dot syntax), "this" is automatically bound to the global object window in node or simply returns "undefined" in strict mode.
+
+Implicit binding is when a function (method) is invoked using dot notation - in such instances, "this" becomes whatever object or variable is to the left of the dot.
+
+Explicit binding is when uses method invocation to bind "this" to a specific object context - when .apply(), .call(), or .bind() are invoked, the first parameter passed through the function's bracket becomes the context for "this". While .call() immediately invokes the function with arguments passed to it individually, .apply() does the same thing but takes arguments in the form of an array instead, and .bind() creates a new function which is not immediately invoked but also takes individual arguments.
+
+New binding (Keyword binding) specifically involves using the "new" keyword when calling constructor functions - in this case, "this" points to the new object that is about to be created.
 
 5. Why do we need super() in an extended class?
+super() replaces the functionality of the .call(), .apply() and .bind() methods of pseudclassical inheritance and is used to pass the properties of the child class through to the parent class.
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade. 
 
